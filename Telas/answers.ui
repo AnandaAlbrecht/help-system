@@ -55,7 +55,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QTextEdit" name="textEdit">
+      <widget class="QTextEdit" name="text_edit_resposta">
        <property name="font">
         <font>
          <pointsize>14</pointsize>
@@ -115,7 +115,7 @@
       <x>10</x>
       <y>120</y>
       <width>1001</width>
-      <height>491</height>
+      <height>461</height>
      </rect>
     </property>
     <property name="widgetResizable">
@@ -127,7 +127,7 @@
        <x>0</x>
        <y>0</y>
        <width>999</width>
-       <height>489</height>
+       <height>459</height>
       </rect>
      </property>
      <widget class="QListView" name="list_view_respostas">
@@ -136,7 +136,7 @@
         <x>20</x>
         <y>10</y>
         <width>951</width>
-        <height>471</height>
+        <height>441</height>
        </rect>
       </property>
       <property name="font">
