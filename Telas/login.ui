@@ -17,7 +17,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Help System</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="verticalLayoutWidget">
@@ -104,7 +104,7 @@
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QLineEdit" name="lineEdit_4">
+          <widget class="QLineEdit" name="line_edit_login">
            <property name="sizeIncrement">
             <size>
              <width>0</width>
@@ -135,7 +135,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="lineEdit_3">
+          <widget class="QLineEdit" name="line_edit_senha">
            <property name="font">
             <font>
              <pointsize>20</pointsize>
@@ -160,7 +160,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="button_enviar">
            <property name="font">
             <font>
              <pointsize>20</pointsize>
@@ -185,6 +185,20 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="button_novo_cadastro">
+           <property name="font">
+            <font>
+             <pointsize>20</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Novo Cadastro</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
