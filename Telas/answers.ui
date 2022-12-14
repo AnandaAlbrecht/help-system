@@ -19,6 +19,9 @@
   <property name="windowTitle">
    <string>Help System</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(170, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
@@ -36,6 +39,9 @@
         <font>
          <pointsize>20</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 255, 255);</string>
        </property>
        <property name="text">
         <string>Pergunta</string>
@@ -60,6 +66,10 @@
         <font>
          <pointsize>14</pointsize>
         </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);</string>
        </property>
        <property name="placeholderText">
         <string>Nova Resposta ...</string>
@@ -144,6 +154,9 @@
         <family>Consolas</family>
         <pointsize>14</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </widget>
