@@ -3,14 +3,21 @@ from PyQt5 import QtWidgets, uic
 
 def fecha_tela(id_tela_anterior):
     if (id_tela_anterior == 1):
+        tela_login.line_edit_login.clear()
+        tela_login.line_edit_senha.clear()
         tela_login.close()
     elif (id_tela_anterior == 2):
+        tela_home.line_edit_busca.clear()
         tela_home.close()
     elif (id_tela_anterior == 3):
+        tela_new_user.line_edit_novo_login.clear()
+        tela_new_user.line_edit_nova_senha.clear()
         tela_new_user.close()
     elif (id_tela_anterior == 4):
+        tela_question.text_edit_pergunta.clear()
         tela_question.close()
     elif (id_tela_anterior == 5):
+        tela_answers.text_edit_resposta.clear()
         tela_answers.close()
 
 
