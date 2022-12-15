@@ -37,11 +37,15 @@
       <widget class="QLabel" name="label_pergunta">
        <property name="font">
         <font>
+         <family>Consolas</family>
          <pointsize>20</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(170, 255, 255);</string>
+        <string notr="true">font: 20pt &quot;Consolas&quot;;</string>
        </property>
        <property name="text">
         <string>Pergunta</string>
@@ -64,12 +68,17 @@
       <widget class="QTextEdit" name="text_edit_resposta">
        <property name="font">
         <font>
-         <pointsize>14</pointsize>
+         <family>Consolas</family>
+         <pointsize>20</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-            background-color: rgb(255, 255, 255);</string>
+                    font: 20pt &quot;Consolas&quot;;
+            </string>
        </property>
        <property name="placeholderText">
         <string>Nova Resposta ...</string>
@@ -82,8 +91,17 @@
         <widget class="QPushButton" name="button_voltar">
          <property name="font">
           <font>
+           <family>Consolas</family>
            <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 85, 255);
+                    font: 20pt &quot;Consolas&quot;;
+            </string>
          </property>
          <property name="text">
           <string>Voltar</string>
@@ -107,8 +125,17 @@
         <widget class="QPushButton" name="button_responder">
          <property name="font">
           <font>
+           <family>Consolas</family>
            <pointsize>20</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 85, 255);
+                    font: 20pt &quot;Consolas&quot;;
+            </string>
          </property>
          <property name="text">
           <string>Responder</string>
@@ -125,8 +152,11 @@
       <x>10</x>
       <y>120</y>
       <width>1001</width>
-      <height>461</height>
+      <height>481</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(110, 255, 190);</string>
     </property>
     <property name="widgetResizable">
      <bool>true</bool>
@@ -137,26 +167,47 @@
        <x>0</x>
        <y>0</y>
        <width>999</width>
-       <height>459</height>
+       <height>479</height>
       </rect>
      </property>
      <widget class="QListView" name="list_view_respostas">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>10</y>
-        <width>951</width>
-        <height>441</height>
+        <y>50</y>
+        <width>961</width>
+        <height>411</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Consolas</family>
-        <pointsize>14</pointsize>
+        <pointsize>20</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgb(255, 255, 255);
+                font: 20pt &quot;Consolas&quot;;
+        </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_respostas">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>999</width>
+        <height>38</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 20pt &quot;Consolas&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Respostas</string>
       </property>
      </widget>
     </widget>

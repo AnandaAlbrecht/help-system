@@ -120,7 +120,9 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(255, 255, 255);</string>
+            <string notr="true">background-color: rgb(255, 255, 255);
+                    font: 20pt &quot;Consolas&quot;;
+            </string>
            </property>
            <property name="placeholderText">
             <string>Login</string>
@@ -148,7 +150,9 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(255, 255, 255);</string>
+            <string notr="true">background-color: rgb(255, 255, 255);
+                    font: 20pt &quot;Consolas&quot;;
+            </string>
            </property>
            <property name="placeholderText">
             <string>Senha</string>
@@ -178,7 +182,9 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 85, 255);</string>
+            <string notr="true">background-color: rgb(0, 85, 255);
+                    font: 20pt &quot;Consolas&quot;;
+            </string>
            </property>
            <property name="text">
             <string>Enviar</string>
@@ -208,7 +214,9 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">background-color: rgb(0, 85, 255);</string>
+            <string notr="true">background-color: rgb(0, 85, 255);
+                    font: 20pt &quot;Consolas&quot;;
+            </string>
            </property>
            <property name="text">
             <string>Novo Cadastro</string>
