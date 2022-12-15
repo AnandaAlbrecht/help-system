@@ -130,7 +130,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="line_edit__novo_login">
+          <widget class="QLineEdit" name="line_edit_novo_login">
            <property name="sizeIncrement">
             <size>
              <width>0</width>
