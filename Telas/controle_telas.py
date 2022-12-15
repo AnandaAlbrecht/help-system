@@ -1,16 +1,18 @@
 from PyQt5 import QtWidgets, uic
 
+
 def fecha_tela(id_tela_anterior):
-    if(id_tela_anterior == 1):
+    if (id_tela_anterior == 1):
         tela_login.close()
-    elif(id_tela_anterior == 2):
+    elif (id_tela_anterior == 2):
         tela_home.close()
-    elif(id_tela_anterior == 3):
+    elif (id_tela_anterior == 3):
         tela_new_user.close()
-    elif(id_tela_anterior == 4):
+    elif (id_tela_anterior == 4):
         tela_question.close()
-    elif(id_tela_anterior == 5):
+    elif (id_tela_anterior == 5):
         tela_answers.close()
+
 
 def chama_telaQuestion(id_tela_anterior):
     fecha_tela(id_tela_anterior)
@@ -61,20 +63,21 @@ tela_question = uic.loadUi("question.ui")
 #tela answers
 tela_answers = uic.loadUi("answers.ui")
 
-tela_login.button_enviar.clicked.connect(chama_telaHome(1))
-tela_login.button_novo_cadastro.connect(chama_telaNewUser(1))
 
-tela_home.button_nova_pergunta.clicked.connect(chama_telaQuestion(2))
-tela_home.button_sair.clicked.connect(chama_telaLogin(2))
+tela_login.button_enviar.clicked.connect(lambda: chama_telaHome(1))
+tela_login.button_novo_cadastro.clicked.connect(lambda: chama_telaNewUser(1))
 
-tela_new_user.button_cadastrar.clicked.connect(chama_telaLogin(3))
-tela_new_user.button_cancelar.clicked.connect(chama_telaLogin(3))
+tela_home.button_nova_pergunta.clicked.connect(lambda: chama_telaQuestion(2))
+tela_home.button_sair.clicked.connect(lambda: chama_telaLogin(2))
 
-tela_question.button_voltar.clicked.connect(chama_telaHome(4))
-tela_question.button_perguntar.clicked.connect(chama_telaAnswers(4))
+tela_new_user.button_cadastrar.clicked.connect(lambda: chama_telaLogin(3))
+tela_new_user.button_cancelar.clicked.connect(lambda: chama_telaLogin(3))
 
-tela_answers.button_voltar.clicked.connect(chama_telaQuestion(5))
-tela_answers.button_responder.clicked.connect(chama_telaAnswers(5))
+tela_question.button_voltar.clicked.connect(lambda: chama_telaHome(4))
+tela_question.button_perguntar.clicked.connect(lambda: chama_telaAnswers(4))
+
+tela_answers.button_voltar.clicked.connect(lambda: chama_telaQuestion(5))
+tela_answers.button_responder.clicked.connect(lambda: chama_telaAnswers(5))
 
 tela_login.show()
 app.exec()
