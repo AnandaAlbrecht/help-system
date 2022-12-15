@@ -19,7 +19,7 @@ def CadastraPergunta(ID_USER, STR_TITULO, STR_PERGUNTA, FLAG_RESOLVIDO, config):
         cnx = mysql.connector.connect(**config)
         cursor = cnx.cursor()
 
-        query = ("INSERT INTO TB_PERGUNTAS.TB_PERGUNTAS(ID_USER, STR_TITULO, STR_PERGUNTA, FLAG_RESOLVIDO, DT_PERGUNTA) "
+        query = ("INSERT INTO TB_PERGUNTAS(ID_USER, STR_TITULO, STR_PERGUNTA, FLAG_RESOLVIDO, DT_PERGUNTA) "
                 "VALUES (%s, %s, %s, %s, %s)")
         data_Uusuario = (ID_USER, STR_TITULO, STR_PERGUNTA, FLAG_RESOLVIDO, datetime.now().date())
 
