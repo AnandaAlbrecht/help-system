@@ -127,18 +127,3 @@ def ListaUsuario(config):
         cursor.close()
         cnx.commit()
         cnx.close()
-
-"""
-
-#CadastraUsuario('user5', 'Nome Pessoa5', 'email4', 'Senha-M4', dbconfig)
-
-ConsultaUsuario('user', 'Senha-M1', dbconfig);
-print(UserID);
-
-ListaUsuario(dbconfig)
-print(userList)
-
-#AtualizaUsuario(UserID, 'Nome Pessoa1', 'email1', 'Senha-M1', dbconfig)
-#
-
-"""
