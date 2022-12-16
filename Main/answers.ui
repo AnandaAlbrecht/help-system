@@ -170,7 +170,7 @@
        <height>479</height>
       </rect>
      </property>
-     <widget class="QListView" name="list_view_respostas">
+     <widget class="QListWidget" name="list_view_respostas">
       <property name="geometry">
        <rect>
         <x>20</x>

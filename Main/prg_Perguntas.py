@@ -24,6 +24,31 @@ def CadastraPergunta(ID_USER, STR_TITULO, STR_PERGUNTA, FLAG_RESOLVIDO, config):
         data_Uusuario = (ID_USER, STR_TITULO, STR_PERGUNTA, FLAG_RESOLVIDO, datetime.now().date())
 
         cursor.execute(query, data_Uusuario)
+        #print(cursor.lastrowid)
+        #return cursor.lastrowid
+
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+            print("Something is wrong with your user name or password")
+        elif err.errno == errorcode.ER_BAD_DB_ERROR:
+            print("Database does not exist")
+        else:
+            print(err)
+    else:
+        cnx.commit()
+        cnx.close()
+
+def CadastraResposta(ID_PERGUNTA, ID_USER, FLAG_MELHOR_RESPOSTA, STR_RESPOSTA, config):
+    try:
+        cnx = mysql.connector.connect(**config)
+        cursor = cnx.cursor()
+
+        query = ("INSERT INTO helpsystem.TB_RESPOSTAS(ID_PERGUNTA, ID_USER, FLAG_MELHOR_RESPOSTA, STR_RESPOSTA, DT_RESPOSTA) "
+                 "VALUES (%s, %s, %s, %s, %s)")
+        data_Uusuario = (ID_PERGUNTA, ID_USER, FLAG_MELHOR_RESPOSTA,
+                         STR_RESPOSTA, datetime.now().date())
+
+        cursor.execute(query, data_Uusuario)
         print(cursor.lastrowid)
     except mysql.connector.Error as err:
         if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -68,6 +93,44 @@ def ConsultaPergunta(ID_PERGUNTA, config):
         cursor.close();
         cnx.commit();
         cnx.close();
+
+def SelecionaRespostas(ID_PERGUNTA, config):
+    global UserID
+    global perguntaList
+
+    UserID = 0
+
+    try:
+        cnx = mysql.connector.connect(**config)
+        cursor = cnx.cursor()
+
+        query = ("SELECT ID_RESPOSTA, ID_PERGUNTA, ID_USER, FLAG_MELHOR_RESPOSTA, STR_RESPOSTA, DT_RESPOSTA FROM helpsystem.TB_RESPOSTAS "
+                 "WHERE ID_PERGUNTA = " + str(ID_PERGUNTA))
+
+        cursor.execute(query)
+        perguntaList = cursor.fetchall()
+        print("Total number of rows in table: ", cursor.rowcount)
+        lista_str = []
+        print(query)
+        for (ID_RESPOSTA, ID_PERGUNTA, ID_USER, FLAG_MELHOR_RESPOSTA, STR_RESPOSTA, DT_RESPOSTA) in perguntaList:
+            UserID = ID_USER
+            #print("{}, {}, {}, {}, {} date {:%d %b %Y}".format(
+                #ID_RESPOSTA, ID_PERGUNTA, ID_USER, FLAG_MELHOR_RESPOSTA, STR_RESPOSTA, DT_RESPOSTA))
+            lista_str.append("*{}* \n{}".format(ID_RESPOSTA, STR_RESPOSTA))
+
+        return lista_str
+
+    except mysql.connector.Error as err:
+        if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+            print("Something is wrong with your user name or password")
+        elif err.errno == errorcode.ER_BAD_DB_ERROR:
+            print("Database does not exist")
+        else:
+            print(err)
+    else:
+        cursor.close()
+        cnx.commit()
+        cnx.close()
 
 def AtualizaPergunta(ID_PERGUNTA, STR_TITULO, STR_PERGUNTA, FLAG_RESOLVIDO, config):
     try:
